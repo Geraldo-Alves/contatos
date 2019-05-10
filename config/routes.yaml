@@ -1,0 +1,18 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+contato_show:
+  path: /api/contato/{id}
+  controller: App\Controller\API\ContatoController::index
+  methods: [GET]
+
+contato_save:
+  path: /api/contato/{id}
+  controller: App\Controller\API\ContatoController::save
+  methods: [POST]
+
+endereco_show:
+  path: /api/contato/{id}/endereco
+  controller: App\Controller\API\EnderecoController::index
+  methods: [GET]

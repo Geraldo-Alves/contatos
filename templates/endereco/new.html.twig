@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello EnderecoController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    <h1>Endereço</h1>
+
+    <h4>Contato: {{ contato.nome }} </h4>
+
+    <form id="form" action="/endereco/save" method="post">
+        <input type="hidden" value="{{ contato.id }}" name="id_contato">
+        <div class="form-group">
+            <label class="label" for="quadra">Quadra</label>
+            <input type="text" class="form-control" name="quadra" value="{{ endereco.quadra }}">
+        </div>
+        <div class="form-group">
+            <label class="label" for="numero">Número</label>
+            <input type="number" class="form-control" name="numero" value="{{ endereco.numero }}">
+        </div>
+        <div class="form-group">
+            <label class="label" for="observacao" >Observação</label>
+            <textarea class="form-control" name="observacao" >{{ endereco.observacao }}
+            </textarea>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Salvar Endereço" class="btn btn-success">
+        </div>
+    </form>
+</div>
+{% endblock %}

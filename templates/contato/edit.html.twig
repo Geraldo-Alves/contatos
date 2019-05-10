@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Editar Contato{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+    <script src="/js/angular/angular.js"></script>
+    <script src="/js/angular-route/angular-route.js"></script>
+    <script src="/js/app.js"></script>
+    <script src="/js/components/edit.js"></script>
+
+<div class="example-wrapper" ng-app="editar_contato">
+    <h1>Editar Contato</h1>
+
+    <div ng-view>
+
+    </div>
+
+</div>
+{% endblock %}
