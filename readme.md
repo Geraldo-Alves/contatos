@@ -1,9 +1,16 @@
 *Instalação*
-    ---
+
     git clone https://github.com/Geraldo-Alves/contatos.git
     cd contatos
     composer install
-    ---
+
+
+*Banco*
+
+    Configuração do arquivo .env
+    php bin/console doctrine:database:create
+    php bin/console doctrine:migrations:migrate
+
 
 *Especificações*
 
