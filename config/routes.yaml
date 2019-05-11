@@ -1,6 +1,7 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+index:
+    path: /
+    controller: App\Controller\API\ContatoController::index
+    methods: [GET]
 
 contato_show:
   path: /api/contato/{id}
