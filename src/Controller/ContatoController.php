@@ -76,4 +76,19 @@ class ContatoController extends AbstractController
         $id = $request->get('id_contato');
         return $this->render('contato/edit.html.twig', ['id' => $id]);
     }
+
+    /**
+     * @Route("/contato/delete/{id}", name="contato_delete", methods="DELETE")
+     */
+    public function delete($id){
+
+      $contato = $this->getDoctrine()
+          ->getRepository(Contato::class)
+          ->find($id);
+
+      $entityManager = $this->getDoctrine()->getManager();
+      $entityManager->remove($contato);
+      $entityManager->flush();
+      return $this->redirectToRoute('contatos');
+    }
 }

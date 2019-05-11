@@ -17,16 +17,15 @@
         <input type="hidden" value="{{ contato.id }}" name="id_contato">
         <div class="form-group">
             <label class="label" for="quadra">Quadra</label>
-            <input type="text" class="form-control" name="quadra" value="{{ endereco.quadra }}">
+            <input type="text" class="form-control" name="quadra" value={% if endereco %} {{endereco.quadra}} {% endif %}>
         </div>
         <div class="form-group">
             <label class="label" for="numero">Número</label>
-            <input type="number" class="form-control" name="numero" value="{{ endereco.numero }}">
+            <input type="number" class="form-control" name="numero" value={% if endereco %} {{endereco.numero}} {% endif %}>
         </div>
         <div class="form-group">
             <label class="label" for="observacao" >Observação</label>
-            <textarea class="form-control" name="observacao" >{{ endereco.observacao }}
-            </textarea>
+            <textarea class="form-control" name="observacao">{% if endereco %} {{endereco.observacao}} {% endif %}</textarea>
         </div>
         <div class="form-group">
             <input type="submit" value="Salvar Endereço" class="btn btn-success">

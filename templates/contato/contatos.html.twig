@@ -30,7 +30,10 @@
                     <a class="btn btn-primary" href="contato/edit?id_contato={{ contato.id}}">Editar</a>
                 </td>
                 <td>
-                    <a class="btn btn-danger" href="contato/delete/{{ contato.id}}">Excluir</a>
+                    <form action="contato/delete/{{ contato.id}}" method="POST">
+                      <input type="hidden" name="_method" value="DELETE">
+                      <input class="btn btn-danger" type="submit" value="Excluir"></a>
+                    </form>
                 </td>
             </tr>
         {% endfor %}

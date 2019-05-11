@@ -10,7 +10,7 @@ contato_show:
 contato_save:
   path: /api/contato/{id}
   controller: App\Controller\API\ContatoController::save
-  methods: [POST]
+  methods: [PUT]
 
 endereco_show:
   path: /api/contato/{id}/endereco
